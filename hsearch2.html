@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Library Management System</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+			background-image: url("adsuc1.jpg");
+	        background-image: cover;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .search-form {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .search-form input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .search-form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #008000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .search-form input[type="submit"]:hover {
+            background-color: #006400;
+        }
+       
+      
+	
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Online Library Search book </h1>
+        <div class="search-form">
+            <form action="sboojas.php" method="post">
+                <input type="text" name="search" placeholder="Search for a book">
+                <input type="submit" value="Search" name="submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

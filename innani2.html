@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Full-screen Image Slider</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .slider-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .slide-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        
+        .slide-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .slide-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .slide.inactive {
+            opacity: 0;
+        }
+    
+	button.neon {
+	border: 2px solid #222;
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background: none;
+	box-shadow: none;
+	font-size: 14px;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 15px 20px;
+	margin: 0px 4px;
+	cursor: pointer;
+	transition: 0.15s all ease-in-out;
+	-moz-transition: 0.15s all ease-in-out;
+	-webkit-transition: 0.15s all ease-in-out;
+}
+
+button.neon:hover {
+	border: 2px solid transparent;
+	color: #111;
+	-webkit-box-reflect: below 1px linear-gradient(transparent, #001);
+}
+
+button.neon.blue:hover {
+	background: #03e9f4;
+	box-shadow: 0px 0px 5px #03e9f4,
+				0px 0px 25px #03e9f4,
+				0px 0px 50px #03e9f4,
+				0px 0px 200px #03e9f4;
+}
+</style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slides">
+            <div class="slide active" style="background-image: url('slide2.jpg');">
+                <div class="slide-content">
+                    <h1>Importance Of Books</h1><br>
+                    <p><h3>The importance of books in our life is that books are one of the most creative art forms. Every book we read
+					has the power to transpose us into a different world filled with several amazing characters. 
+					Books can increase the powerr of our imagination and can act as a gate that opens doors to a dream world, far from the harsh realities of real life. Your imagination and creativity will be simulated by reading a good 
+					fictional book.  The ability to help expand ones horizons is certainly an example of the importance of book reading. </h3></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <center>
+	<div class="neon-buttons">
+	<button type="button" class="neon blue">
+	<a href="homelib.html" class="button">Go Home</a></button>
+	</div>
+	</center>
+	
+</body>
+</html>

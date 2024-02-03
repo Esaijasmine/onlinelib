@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Slider</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+		
+        .slider-container {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slider {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            width: 33.33%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .slide-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: black;
+            font-family: Verdana, sans-serif;
+        }
+        
+        .slide-content h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .slide-content p {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .prev {
+            left: 10px;
+        }
+        
+        .next {
+            right: 10px;
+        }
+		
+		<style>
+        /*styling background*/
+		body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 80vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            font-family: sans-serif;
+        }
+ 
+        /* styling the button*/
+        a {
+            padding: 20px 20px;
+            display: inline-block;
+            color: #008000;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1em;
+            overflow: hidden;
+        }
+ 
+        /*creating animation effect*/
+        a:hover {
+            color: #111;
+            background: #39ff14;
+            box-shadow: 0 0 50px #39ff14;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="newp.jpg" alt="Image 1">
+                <div class="slide-content">
+                    <h2><b>NEWS PAPER</b></h2>
+                    <p><b>News papers are an important resources for libraries for several reasons. First, newspapers provide up-to-date
+					information on local,national, and international news, events, and issues. </b></p>
+					<p><b>They can help library patrons stay informed about current events and provide valuable conntext for research and study. </b></p>
+                    <p> <li><a href="newspaper1.html">E-NEWS</a></li> </p>					
+                </div>
+            </div>
+            <div class="slide">
+                <img src="mag.jpg" alt="Image 2">
+                <div class="slide-content">
+                    <h2><b>MAGAZINE</b></h2>
+                    <p><b>Libraries usually maintain a collection of current and past issues of various  magazines. Magazines cover diverse subjects,
+                    so you can find something of interest to you, whether its related to you, whether its related to hobbies, academic research,
+                    or general knowledge. 
+				    Magazines are typically published ona regular schedule, such as weekly, monthly, or quarterly. </b></p>
+				</div>
+            </div>
+            <div class="slide">
+                <img src="jou1.jpg" alt="Image 3">
+                <div class="slide-content">
+                    <h2><b>JOURNAL</b></h2>
+                    <p><b>Journals in a library are an essentail resource for researchers. students, and anyone seeking in-depth information on specific topics. </b></p>
+                    <p><b> Journals play a crucial role in advancing knowledge and providing a wealth of information across various feild. </b></p>
+				</div>
+            </div>
+        </div>
+        
+        <div class="prev">&#10094;</div>
+        <div class="next">&#10095;</div>
+    </div>
+    <div class="">
+	<center>
+	<p> <h1><b>Welcome to Our library " CATALOG " Section.. You can Read News Papers here !</p>
+	</center>
+	</div>
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const slideWidth = slides[0].clientWidth;
+        let counter = 1;
+        
+        slider.style.transform = 'translateX(' + (-slideWidth * counter) + 'px)';
+        
+        nextBtn.addEventListener('click', () => {
+            if (counter >= slides.length - 1) return;
+            slider.style.transition = 'transform 0.5s ease-in-out';
+            counter++;
+            slider.style.transform = 'translateX(' + (-slideWidth * counter) + 'px)';
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            if (counter <= 0) return;
+            slider.style.transition = 'transform 0.5s ease-in-out';
+            counter--;
+            slider.style.transform = 'translateX(' + (-slideWidth * counter) + 'px)';
+        });
+        
+        slider.addEventListener('transitionend', () => {
+            if (slides[counter].id === 'last-clone') {
+                slider.style.transition = 'none';
+                counter = slides.length - 2;
+                slider.style.transform = 'translateX(' + (-slideWidth * counter) + 'px)';
+            }
+            if (slides[counter].id === 'first-clone') {
+                slider.style.transition = 'none';
+                counter = slides.length - counter;
+                slider.style.transform = 'translateX(' + (-slideWidth * counter) + 'px)';
+            }
+        });
+    </script>
+	<center>
+	<a href="homelib.html" class="button">Go Home</a>
+	</center>
+</body>
+</html>

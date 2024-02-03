@@ -1,0 +1,44 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="newspadd.css">
+</head>
+<body>
+		<ul>
+		  <li><a href="duu.html">Home</a></li>
+		 
+		</ul>
+		<div class="form-style-6">
+			<h1>Add News Paper</h1>
+				<form method="POST" action="connection.php" enctype="multipart/form-data" onsubmit="return validate(this)">
+					<input type="text" id="name" name="day" placeholder="Day*" required/>
+					<textarea cols="25" rows="4" name="newsdesc" placeholder="News Description*" required></textarea>
+					<input type="text" id="password" name="date" placeholder="Date*"/ required>
+					<!--<select name="booklang" required>
+						  <option selected disabled>Select Book Language*</option>
+						  <option value="Tamil">Tamil</option>
+						  <option value="English">English</option>
+						  <option value="Hindi">Hindi</option>
+						  <option value="French">French</option>
+						  <option value="Other">Other Language</option>
+					</select>-->
+					<h1><b><div style="padding-bottom: 6px"><label>Select NewsPaper * (Only Pdf, Doc & Docx files are allowed)</label></div></b></h1>
+					<input type="file" name="bookfile" id="bookfile" required/>
+					<!--<input type="text" id="name" name="uploadername" placeholder="Uploaders Name*" required/>
+					<input type="email" id="name" name="uploaderemail" placeholder="Uploaders Email*" required/>-->
+					<input type="submit" id="submit" name="submit">
+			</form>
+		</div>
+	</body>
+</html>
+ <script>
+    function validate() {
+    var val = document.getElementById('bookfile').value.toLowerCase();
+    var regex = new RegExp("(.*?)\.(docx|doc|pdf)$");
+        if(!(regex.test(val))) {
+            document.getElementById('bookfile').value = '';
+            alert('Please select correct file format.');
+            return false;   
+        }
+		return true;
+		}
+</script>

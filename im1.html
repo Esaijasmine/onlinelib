@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image with Text</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+        
+        .image {
+            max-width: 70%;
+            height: auto;
+        }
+        
+        .text {
+            margin-top: 20px;
+            font-family: Comic Sans;
+            font-size: 16px;
+            color: #333;
+        }
+		
+		@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+		.btn {
+  position: relative;
+  width: 20%;
+  background: #550000;
+  padding: 10px;
+  margin: 30vh 0;
+  display: inline-block;
+  text-transform: uppercase;
+  overflow: hidden;/*Comment here to see the magic*/
+  border-radius: 5px;
+  transition: .35s;
+  text-decoration: none;
+  letter-spacing: 4px;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 10px rgba(255,255,255,.3),
+              0 0 20px 30px rgba(255,255,255,.2),
+              0 0 30px 30px rgba(255,255,255,.1);
+  transition-delay: 1s;
+  color: #440000;
+  background: #fff;
+}
+
+.btn span {
+  position: absolute;
+  display: block;
+}
+
+.btn span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #FFEBEE);
+}
+
+.btn:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.btn span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(270deg, transparent, #FFEBEE);
+}
+
+.btn:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: .5s;
+}
+
+.btn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #FFEBEE);
+}
+
+.btn:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: .25s;
+}
+
+.btn span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(0deg, transparent, #FFEBEE);
+}
+
+.btn:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: .75s;
+}
+
+.cd {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  color: #aa0000;
+}
+
+.btn:active {
+  transition-delay: unset;
+  transition-duration: .25;
+  transform: scale(.95);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="image" src="img2.jpg" alt="Image">
+        <div class="text">
+            <p><h1>Library</h1></p>
+			<p1 style="color:black;  text-align: center; font-style:times new roman">
+            <b><h3>A library is a collection of resources, typically in the form of books, manuscripts, journals, 
+			multimedia materials, and digital content, organized for research, education, or public use. 
+			Libraries serve as valuable repositories of knowledge and information, and they play a significant role in society by facilitating learning, research, and access to a wide range of materials. </h3></b></p1>
+        <p2 style="color:black;  text-align: center; font-style:times new roman">
+		<h3><b> Libraries are essential institutions that promote literacy, education, and lifelong learning. They provide a wealth of resources and services to individuals and communities, contributing to knowledge dissemination and cultural enrichment. 
+		The role of libraries has evolved with the digital age, ensuring that they continue to meet the changing needs of their users. </b></h3></p2>
+		</div>
+    </div>
+	<center>
+	<a href="innani2.html" class="btn">Go To</a>
+	</center>
+</body>
+</html>
