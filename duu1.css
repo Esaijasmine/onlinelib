@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('dbst2.jpg'); /* Add your library background image here */
+    background-image: url('dbst2.png'); /* Add your library background image here */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -46,7 +46,7 @@ body {
     display: none;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dropdown background */
-    background-image: url('adsu4.jpg'); /* Add dropdown background image */
+    background-image: url('adsu4.png'); /* Add dropdown background image */
     background-size: cover;
 }
 
