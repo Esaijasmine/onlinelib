@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<title>LOGIN PAGE</title>
+<style>
+body{
+margin:0;
+text-align:center;
+font-family:sans-serief;
+font-weight:bold;
+colour:white;
+background-image:url('limg.jpg');
+background-size:cover;
+padding-top:100px;
+}
+table
+{
+text-align:left;
+margin:auto;
+}
+input::placeholder
+{
+color:white;
+font-size:17px;
+}
+input
+{
+width:90%;
+margin:5px;
+line-height:30px;
+outline:none;
+font-size:15px;
+background-color:transparent;
+border:none;
+border-bottom:2px solid white;
+color:white;
+}
+input[type="submit"]
+{
+background-color:#d4afba;
+color:white;
+border:none;
+width:30%;
+height:30px;
+}
+.container
+{
+width:30%;
+margin:5.5%auto;
+padding:8px;
+background-color:rgba(90,90,90,0.5);
+border-radius:20px;
+box-shadow:15px;
+}
+</style>
+</head>
+<div class="container" id="focus">
+<p id ="Error" style="display:none">your login name or password invalid</p>
+<form action="logi1.php"method="POST">
+<table>
+<center>
+<h1>login</h1>
+</center>
+<tr>
+<td>USER NAME:</td>
+<td><input type="text" name="uname" placeholder="Enter your username"required/> </td>
+</tr>
+<tr>
+<td>PASSWORD:</td>
+<td><input type="text" name="password" placeholder="Enter your password"required/></td>
+</tr>
+<tr>
+<table>
+<center>
+<input type="submit" value="login" name= 'submit' id='sub'/>
+</center>
+</form>
+<p>Don't have an account ?<a href="signup.html">Sign up</a>
+</center>
+</div>
+<script>
+</body>
+</html>

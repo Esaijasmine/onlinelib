@@ -1,0 +1,72 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('dbst2.jpg'); /* Add your library background image here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for readability */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dropdown background */
+    background-image: url('adsu4.jpg'); /* Add dropdown background image */
+    background-size: cover;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        text-align: center;
+    }
+
+    .menu li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+}
