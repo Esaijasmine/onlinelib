@@ -29,7 +29,7 @@
  display: flex;
  justify-content: center;
  align-items: center;
- background-image: url("dbs2.jpg");
+ background-image: url("dbs2.png");
   background-size: cover;
 }
 .neon-button {
